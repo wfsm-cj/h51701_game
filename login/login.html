@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>login</title>
+		<style>
+			html,body{
+				height: 100%;
+			}
+			*{
+				margin: 0;padding: 0;
+			}
+			a{
+				text-decoration: none;
+			}
+			ul li{
+				list-style: none;
+			}
+			.wapper{
+				width: 100%;
+				height: 100%;
+				/*background-color: #ccc;  这个百分百上面会有空隙？？*/
+			}
+			.container{
+				width: 70%;
+				height: 500px;
+				background-color: #fff;
+				margin: 10px auto;
+			}
+			
+			.container h1,.container .title{
+				text-align: center;
+				margin-bottom:30px ;
+			}
+			.container .box{
+				width: 300px;
+				height: 40px;
+				border: 1px solid #ccc;
+				margin:5px auto 5px;
+			}
+			.container .region i{
+				/*background: url(img/icon_user.png) no-repeat ;*/
+				/*width: 40px;height: 40px;*/
+				border: 1px solid;
+			} 
+			.container .region input{
+				text-indent: 1em;
+				width: 250px;
+				height: 40px;
+				vertical-align: middle;
+				outline: none;
+				border: none;
+				border-right: 1px solid #ccc;
+			}
+			/*.container .region input{
+				width: 250px;
+				height: 40px;
+				vertical-align: middle;
+				outline: none;
+				border: none;
+				border-right: 1px solid #ccc;
+			}*/
+			.container .tel input{
+				text-indent: 1em;
+				width: 250px;
+				height: 40px;
+				vertical-align: middle;
+				outline: none;
+				border: none;
+			}
+			.container .code input:first-child{
+				text-indent: 1em;
+				width: 200px;
+				height: 40px;
+				/*vertical-align: middle;*/
+				line-height: 40px;
+				outline: none;
+				border: none;
+				border-right: 1px solid #ccc;
+			}
+			.container .code #code{
+				float: right;
+				width: 99px;
+				height: 40px;
+				line-height: 40px;
+				
+				/*vertical-align: middle;*/
+				text-align: center;
+				outline: none;
+				border: none;
+			}
+			
+			.container .regist input{
+				
+				border: none;
+				width: 300px;
+				height: 40px;
+				background-color: orange;
+				font-weight: bolder;
+				color: #fff;
+				font-size: 16px;
+			}
+			
+			.container p{
+				width: 300px;
+				height: 30px;
+				font-size: 14px;
+				margin: 0 auto;
+			}
+			.container p a{
+				font-weight: bold;
+				color: #222;
+			}
+			
+			
+			footer{
+				width: 70%;
+				margin: 10px auto;
+			}
+			footer ul{
+				width: 300px;
+				height: 30px;
+				margin: 0 auto;
+			}
+			footer ul li{
+				float: left;
+				border-right: 1px solid #000;
+				font-size: 12px;
+				padding: 0 16px;
+			}
+			footer p{
+				font-size: 12px;
+				width: 500px;
+				margin: 0 auto;
+			}
+			
+			#errorTel{
+				font-size: 12px;
+				color: red;
+				height: 16px;
+				line-height: 16px;
+			}
+			#errorCode{
+				font-size: 12px;
+				color: red;
+				height: 16px;
+				line-height: 16px;
+			}
+			#warn{
+				border: 1px solid orangered;
+			}
+			/*.error{
+				border: 1px solid orange;
+			}*/
+		</style>
+	</head>
+	<body style="background: #ccc;">
+		<div class="wapper">
+			<div class="container">
+				<h1 class="login"><img src="img/milogo.png" alt="" /></h1>
+					<h2 class="title">注册小米账号</h2>
+					<form action="" method="post">
+						<div class="box region">
+							<input type="text" value="中国(+86)" id="region" />
+							<i>icon</i></label>
+						</div>
+						<div class="box tel" id="">
+							<input type="text" placeholder="请输入手机号码" id="tel" />
+							<!--<span>123</span>-->
+						</div>
+							<p id="errorTel" style="display: none;">手机号码有误</p>
+						<div class="box code">
+							<input type="text" placeholder="图片验证码" id="inputCode"/>
+							<span id="code" ></span>
+							<!--<span>123</span>-->
+						</div>
+							<p id="errorCode" style="display: none;">验证码有误</p>
+						
+						<div class="box regist">
+							<input type="submit" value="立即注册" id="regist"/>
+						</div>
+						<p>点击“立即注册”，即表示您同意并愿意遵守小米 <a href="#">用户协议</a> 和 <a href="">隐私政策</a></p>
+					</form>
+				
+			</div>
+			
+			
+			<footer>
+				<ul>
+					<li>简体</li>
+					<li>繁体</li>
+					<li>Eglish</li>
+					<li>常见问题</li>
+				</ul>
+				
+				<p>小米公司版权所有-京ICP备10046444- <img src="img/ghs.png" alt="" />京公网安备11010802020134号-京ICP证110507号</p>
+			</footer>
+			
+		</div>
+		
+		
+		<script src="jquery-1.12.4.min.js"></script>
+		<script src="login.js"></script>
+	</body>
+</html>
